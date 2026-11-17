@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#283044","tertiary-fixed-dim":"#ffb2b7","error":"#ba1a1a","on-primary-fixed":"#0f0069","outline":"#777587","surface-bright":"#faf8ff","on-background":"#131b2e","surface-dim":"#d2d9f4","on-primary-fixed-variant":"#3323cc","on-secondary-fixed":"#001e2f","error-container":"#ffdad6","on-surface":"#131b2e","secondary-container":"#39b8fd","primary":"#3525cd","surface-variant":"#dae2fd","surface-container-low":"#f2f3ff","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#40000d","on-primary":"#ffffff","on-tertiary":"#ffffff","inverse-on-surface":"#eef0ff","surface":"#faf8ff","on-secondary":"#ffffff","on-primary-container":"#dad7ff","on-error":"#ffffff","surface-container-highest":"#dae2fd","outline-variant":"#c7c4d8","primary-container":"#4f46e5","primary-fixed":"#e2dfff","inverse-primary":"#c3c0ff","on-tertiary-fixed-variant":"#92002a","on-secondary-container":"#004666","secondary":"#006591","secondary-fixed-dim":"#89ceff","on-secondary-fixed-variant":"#004c6e","surface-container-high":"#e2e7ff","surface-container":"#eaedff","surface-tint":"#4d44e3","tertiary-fixed":"#ffdadb","primary-fixed-dim":"#c3c0ff","on-tertiary-container":"#ffd0d2","on-surface-variant":"#464555","on-error-container":"#93000a","tertiary":"#95002b","background":"#faf8ff","tertiary-container":"#bf0f3c","secondary-fixed":"#c9e6ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem",margin:"1rem","gutter-lg":"2rem","space-lg":"1rem","margin-lg":"2rem","space-md":"0.75rem","margin-md":"1.5rem","gutter-md":"1.5rem","space-sm":"0.5rem",gutter:"1rem","space-xl":"1.5rem","space-2xl":"2rem"},fontFamily:{"headline-lg":["Plus Jakarta Sans"],display:["Plus Jakarta Sans"],"mono-metric":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"title-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"]},fontSize:{"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.025em",fontWeight:"600"}],display:["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.03em",fontWeight:"700"}],"mono-metric":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["0.8125rem",{lineHeight:"1rem",letterSpacing:"-0.005em",fontWeight:"500"}],"body-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["0.75rem",{lineHeight:"1.125rem",fontWeight:"400"}],"title-sm":["0.9375rem",{lineHeight:"1.375rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="PulseFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBSTdZzsQHm82HjGjSVAYh1cnlmEOa_I8csHddxiUNNb77dSjQhYInn27LtoDzpwAEaMl-wOrybtKuaeVvoCN3arM3UyYdWqTSEKsYQ8bz0DVNLQP7N_ebFd_uFTTIpmFwP-3vuu3j_w0svzykKztg2kCTSN1uqIwEcD850_iPg8hRwzZ14gi2GTp1fRk0tU40dCD13GRKwhPU9L9T95JaLX6adGvn2xTILmm2EHvLj"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">PulseFlow</span><span class="px-space-sm py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider">Pro</span></div></div><div class="px-space-md pt-space-xs pb-space-sm"><div class="w-full flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><div class="w-6 h-6 rounded-lg bg-primary text-on-primary flex items-center justify-center font-title-sm text-title-sm flex-shrink-0">A</div><div class="truncate text-left"><p class="font-title-sm text-title-sm truncate leading-tight">Artisan Bakery</p><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Studio Workspace</p></div></div><span class="material-symbols-outlined text-outline text-[1.25rem]">unfold_more</span></div></div><nav class="px-space-md py-space-xs space-y-1 flex flex-col" data-active-classes="bg-primary-container text-on-primary font-title-sm shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[1.25rem]">grid_view</span><span>Overview</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="trend-research" href="#"><span class="material-symbols-outlined text-[1.25rem]">trending_up</span><span>Trend Research</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="post-composer" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[1.25rem]">auto_fix_high</span><span>Post Composer</span></div><span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">AI Magic</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="content-calendar" href="#"><span class="material-symbols-outlined text-[1.25rem]">calendar_month</span><span>Content Calendar</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[1.25rem]">bar_chart</span><span>Analytics</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-title-sm shadow-sm" data-path="connect-accounts" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[1.25rem]">link</span><span>Connect Accounts</span></div><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></a></nav></div><div class="p-space-md space-y-space-md bg-surface-container-lowest"><div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>CONNECTED CHANNELS</span><span class="material-symbols-outlined text-[1rem]">sensors</span></div><div class="flex items-center gap-space-sm pt-space-xs"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>LI</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>IG</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>X</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>YT</span></div></div></div><div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs"><div class="flex items-center justify-between text-on-surface font-title-sm text-title-sm"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[1rem]">bolt</span>AI Repurposes</span><span class="font-mono-metric text-mono-metric text-on-surface-variant">84/100</span></div><div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full rounded-full bg-primary" style="width: 84%;"></div></div><p class="font-body-sm text-body-sm text-on-surface-variant pt-0.5">16 credits renew in 5 days</p></div><div class="flex items-center justify-between px-space-sm pt-space-xs text-on-surface-variant"><a class="flex items-center gap-space-sm hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="help-and-settings" href="#"><span class="material-symbols-outlined text-[1.25rem]">settings</span><span>Help &amp; Settings</span></a><span class="material-symbols-outlined text-[1.25rem] cursor-pointer hover:text-on-surface">help</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between gap-space-lg"><div class="relative flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-[1.25rem]">search</span><input class="w-full h-10 pl-10 pr-16 rounded-lg bg-surface-container-lowest border-0 ring-1 ring-outline-variant focus:ring-2 focus:ring-primary focus:outline-none text-on-surface placeholder:text-outline font-body-md text-body-md transition-all" placeholder="Search posts, trends, campaigns..." type="text"/><kbd class="absolute right-space-md px-1.5 py-0.5 rounded bg-surface-container font-mono-metric text-label-sm text-on-surface-variant pointer-events-none">Ctrl+K</kbd></div></div><div class="flex items-center gap-space-md flex-shrink-0"><button class="h-9 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center gap-space-sm shadow-sm transition-colors"><span class="material-symbols-outlined text-[1.25rem]">add</span><span>New Repurpose Flow</span></button><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer transition-colors"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-md text-label-md text-on-surface-variant">Review Queue <strong class="text-tertiary font-semibold">(3)</strong></span></div><button class="w-9 h-9 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[1.25rem]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTVQcSQky7EKjVFLFcdcEFheyvcJ2LvH6dpueyXHjEvV005lhAGf6v_HOhYF7uX3-DinZ0y7--Gjn308o6Yj6B6KJJbobyu7B3havT_SoQ5Tsg3a-nXwfZY_w8hyn5vb5DC5F2eOZyDHnCl1jh4Nss2VjWqe7ZHnXoCccnIqJnyhbI06v8NR8sRl-6BKvqH0-Uzy9F1AvWdFr33fRJaVvnCNWhr3jA863kDWO1kHM"/><div class="hidden xl:block text-left"><p class="font-title-sm text-title-sm text-on-surface leading-tight">Elena Rostova</p><p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Founder</p></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-xl py-space-xl"><div class="flex flex-col w-full gap-space-2xl">
+<!-- Top Meta Banner / Header -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-space-xl md:p-space-2xl shadow-sm">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute right-32 -bottom-20 w-64 h-64 rounded-full bg-secondary-container/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>API GATEWAY • REGION US-EAST-1</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Connected Channels &amp; Publishing Permissions</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your social channels, API access tokens, automated publishing permissions, and real-time webhook health.</p>
+</div>
+<div class="flex items-center gap-space-md self-start md:self-auto flex-wrap">
+<button class="h-10 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm hover:bg-surface-container transition-all flex items-center gap-2" id="runDiagnosticsBtn">
+<span class="material-symbols-outlined text-[1.25rem] text-primary">sensors</span>
+<span>Run Global Health Check</span>
+</button>
+<button class="h-10 px-4 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm shadow-md hover:bg-primary-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[1.25rem]">add_link</span>
+<span>Connect New Platform</span>
+</button>
+</div>
+</div>
+<!-- Telemetry strip -->
+<div class="mt-space-xl pt-space-md flex flex-wrap items-center gap-space-xl text-on-surface-variant font-mono-metric text-mono-metric">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface font-semibold">4 / 6</span> Active Integrations
+      </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[1rem] text-secondary">verified_user</span>
+<span class="text-on-surface font-semibold">OAuth 2.0</span> Encrypted Handshake
+      </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[1rem] text-tertiary">alarm</span>
+<span>1 Token expiring soon</span>
+</div>
+<div class="flex items-center gap-2 ml-auto">
+<span class="text-on-surface-variant">Next automatic token refresh:</span>
+<span class="font-semibold text-on-surface">02:44:19</span>
+</div>
+</div>
+</div>
+<!-- Social Channel Connection Grid -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[1.5rem]">hub</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Platform Instances</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Instant 1-Click Refresh available for all connected scopes</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: LinkedIn -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center font-display text-primary font-bold text-headline-md">
+                in
+              </div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">LinkedIn</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Company Page &amp; Personal Profile</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+              Healthy
+            </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Profile headshot of creative founder Elena Rostova in a sunlit bakery studio wearing neutral linen apron, professional editorial styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFuE7MduOcl6J1ubsKw7kdiMYZLVRXL60CuGPVYxZSyFIygv7zq6ZQRubVdKL4mju6UdgicsJQGFln1RojlmirbFT9xYVhQZL0soXHRkNNrpot_dzO-4N9v6r2MqleFWJT-705aTi3g6WUoNVTWjBtU34m5w1vU1j0j_TxFtAvqDNzBryFOSzysU7No0FcV5w8aX1Sw8bmF6hr_Z932SwzjqKx4DKBtj1hobRidcc"/>
+<div class="truncate">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Elena Rostova</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Artisan Studio • Admin Access</p>
+</div>
+</div>
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Granted Scopes</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">Read Analytics</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">Write Posts</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">Comment Manager</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg mt-space-lg space-y-space-md">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[1rem] text-outline">sync</span>
+              Synced 12 mins ago
+            </span>
+<span class="font-mono-metric text-on-surface">Ping: 34ms</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-title-sm text-title-sm transition-colors">Test Connection</button>
+<button class="h-9 px-3 rounded-lg text-outline hover:text-error hover:bg-error-container/20 font-title-sm text-title-sm transition-colors">Disconnect</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Instagram (Warning) -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[1.5rem]">photo_camera</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Instagram</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Creator Account • Graph API</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              Attention Needed
+            </span>
+</div>
+<div class="p-space-sm rounded-lg bg-error-container/40 space-y-1.5">
+<div class="flex items-center gap-2 text-error font-title-sm text-title-sm">
+<span class="material-symbols-outlined text-[1.1rem]">warning</span>
+<span>Re-auth Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container leading-relaxed">
+              Meta access token expires in <strong>4 days</strong>. Re-authenticate now to prevent scheduled Reel publish failures.
+            </p>
+</div>
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Target Feed</span>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low text-on-surface font-title-sm text-title-sm">
+<span>@artisan_bakery_daily</span>
+<span class="font-mono-metric text-on-surface-variant text-body-sm">38.4k Followers</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg mt-space-lg space-y-space-md">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-error font-mono-metric">Exp: Nov 14, 23:59 UTC</span>
+<span class="font-mono-metric text-error">Tokens: 1</span>
+</div>
+<button class="w-full h-9 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[1.1rem]">key</span>
+<span>Re-authenticate Now</span>
+</button>
+</div>
+</div>
+<!-- Card 3: X (Twitter) -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface font-display font-black text-headline-md">
+                𝕏
+              </div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">X API v2</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Thread Builder &amp; Media API</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+              Healthy
+            </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">@ElenaBakes</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-mono-metric text-label-sm text-on-surface-variant">Basic Tier</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Monthly API Cap Usage</span>
+<span class="font-mono-metric font-semibold text-on-surface">142 / 200 posts</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 71%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Caps reset on 1st of next month</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-lg space-y-space-md">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Webhook Latency</span>
+<span class="font-mono-metric text-on-surface">42ms</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-title-sm text-title-sm transition-colors">Test Connection</button>
+<button class="h-9 px-3 rounded-lg text-outline hover:text-error hover:bg-error-container/20 font-title-sm text-title-sm transition-colors">Disconnect</button>
+</div>
+</div>
+</div>
+<!-- Card 4: YouTube Shorts -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[1.5rem]">play_circle</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">YouTube Shorts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Google OAuth 2.0 Client</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+              Healthy
+            </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center font-display font-bold">
+              AS
+            </div>
+<div class="truncate">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Artisan Bakes Shorts</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">14.2k active subscribers</p>
+</div>
+</div>
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Permissions</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">Direct Video Upload</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-body-sm text-body-sm">Custom Thumbnails</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg mt-space-lg space-y-space-md">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[1rem] text-outline">verified</span>
+              Direct Resumable Upload
+            </span>
+<span class="font-mono-metric text-on-surface">100% OK</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex-1 h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-title-sm text-title-sm transition-colors">Test Connection</button>
+<button class="h-9 px-3 rounded-lg text-outline hover:text-error hover:bg-error-container/20 font-title-sm text-title-sm transition-colors">Disconnect</button>
+</div>
+</div>
+</div>
+<!-- Card 5: TikTok (Not Connected) -->
+<div class="group relative rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[1.5rem]">music_note</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">TikTok Creator Hub</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Commercial Content API</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              Not Connected
+            </span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest text-center space-y-2">
+<div class="w-10 h-10 rounded-full bg-surface-container mx-auto flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[1.25rem]">video_library</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Automate Micro-Vlogs</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Publish 9:16 vertical cuts directly from your workspace without manual device transfers.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-lg">
+<button class="w-full h-10 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[1.25rem]">add</span>
+<span>Connect TikTok Account</span>
+</button>
+</div>
+</div>
+<!-- Card 6: Pinterest (Inactive / Pending Setup) -->
+<div class="group relative rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[1.5rem]">push_pin</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Pinterest Business</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Creator Catalog &amp; Rich Pins</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+              Setup Pending
+            </span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface">Domain Verification</span>
+<span class="text-tertiary font-label-sm text-label-sm font-semibold">Action Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Add the DNS TXT record to your bakery root domain to claim brand authority.</p>
+<div class="p-2 rounded bg-surface-container font-mono-metric text-label-sm text-on-surface-variant truncate">
+              pulseflow-verify=pf_tok_9918231aef7
+            </div>
+</div>
+</div>
+<div class="pt-space-lg mt-space-lg">
+<button class="w-full h-9 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-title-sm text-title-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[1.1rem]">task_alt</span>
+<span>Complete Setup</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Diagnostics Panel & Health Simulator -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Diagnostics Live Feed -->
+<div class="lg:col-span-8 rounded-2xl bg-surface-container-lowest p-space-xl shadow-sm flex flex-col justify-between space-y-space-lg">
+<div class="flex items-center justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[1.25rem]">monitor_heart</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Channel Health Diagnostic Tool</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous background runner querying live endpoint handshakes and webhook latency.</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 text-on-secondary-container font-mono-metric text-label-sm" id="diagnosticStatusBadge">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          System Stable
+        </span>
+</div>
+<!-- Log / Progression items -->
+<div class="space-y-3 font-mono-metric text-body-sm">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[1.2rem]">check_circle</span>
+<span class="text-on-surface">Checking LinkedIn REST endpoints &amp; webhooks...</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface text-label-sm font-semibold">[OK] 200 OK</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between transition-colors" id="stepInstagram">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[1.2rem]" id="instaIcon">refresh</span>
+<span class="text-on-surface">Verifying Instagram Graph API token lifetime...</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-semibold" id="instaBadge">[EXPIRING] 96h</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[1.2rem]">check_circle</span>
+<span class="text-on-surface">Validating X (Twitter) Rate Limits (REST v2 /tweets)...</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface text-label-sm font-semibold">[OK] 58 Remaining</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[1.2rem]">check_circle</span>
+<span class="text-on-surface">Probing Google Video Resumable Upload pipeline...</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface text-label-sm font-semibold">[OK] 420 Mbps</span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[1.2rem]">speed</span>
+</div>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Automatic Retry Backoff: Exponential</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Failed webhooks auto-retry at 30s, 2m, 10m intervals</p>
+</div>
+</div>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary font-title-sm text-title-sm shadow-sm hover:bg-primary transition-all flex items-center justify-center gap-1.5" id="recheckDiagnosticsBtn">
+<span class="material-symbols-outlined text-[1.1rem]">restart_alt</span>
+<span>Re-run Test Suite</span>
+</button>
+</div>
+</div>
+<!-- Right: Studio Visual Showcase / Content Engine Specs -->
+<div class="lg:col-span-4 rounded-2xl bg-surface-container-lowest p-space-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Active Creative Workspace</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-mono-metric text-label-sm">v2.4.1</span>
+</div>
+<div class="relative overflow-hidden rounded-xl h-44 group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal sourdough bread loaves with crisp scoring patterns cooling on stainless steel bakers rack in a soft bright Scandinavian kitchen bakery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0h97Zh1u_WzbaJJEr15rpMlg1SdoXqZC9mW5VQbFggih3WT06r5zqmNMqvHtUWcTD2WyaDRZhFfdBuzpKwr8ksK-RNdiz7isOtAJDX9tRYemxGTKPj7sD-Ylz8In_26Dxl-AKhMFKKzDwO-WE6Ha9mIjWhT1RsU_zR5-Ws6sHrAoyfMvbNAmN-CIWqcS3W7ePGPcwpQvMly9N6WAWr4wnVQk8vUWL3TCNDFokQUE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-space-md">
+<div>
+<p class="font-title-sm text-title-sm text-on-primary">Artisan Bakery Main Feed</p>
+<p class="font-body-sm text-body-sm text-surface-container-high">Multi-channel syndicated queue</p>
+</div>
+</div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Pipeline Synchronization</span>
+<span class="font-mono-metric text-on-surface">99.98%</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Scheduled Queue Size</span>
+<span class="font-mono-metric text-on-surface">18 Items</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Webhook Failure Limit</span>
+<span class="font-mono-metric text-on-surface">3 attempts</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[1.25rem]">security</span>
+<p class="font-body-sm text-body-sm text-on-surface">Tokens strictly encrypted using AES-256 GCM at rest.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Error State & Disaster Recovery Section -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[1.5rem]">shield</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Disaster Recovery &amp; Queue Safety</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Real-time Dead Letter Queue</span>
+</div>
+<!-- Safe Posting Guarantee Banner -->
+<div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[1.4rem]">verified_user</span>
+</div>
+<div class="space-y-0.5">
+<h3 class="font-title-sm text-title-sm text-on-surface">Safe Posting Guarantee &amp; Human-in-the-Loop Gate</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            PulseFlow will never post unverified generative copy or unreviewed drafts to live feeds without your explicit sign-off when <strong class="text-on-surface font-semibold">“Require Confirmation”</strong> is toggled ON.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end md:self-auto">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="safeGateToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="font-title-sm text-title-sm text-on-surface whitespace-nowrap">Gate Active</span>
+</div>
+</div>
+<!-- Publishing Failures & Retry Queue Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Publishing Failures &amp; Retry Queue</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-metric text-label-sm">0 active failures</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<span>Log retention: 30 days</span>
+<button class="text-primary hover:underline font-title-sm">Export Audit Log</button>
+</div>
+</div>
+<!-- Empty state inside queue box -->
+<div class="p-space-xl rounded-xl bg-surface-container-low/60 text-center space-y-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest mx-auto flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[1.5rem]">task_alt</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Dead-Letter Queue is Empty</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mx-auto">
+          All webhook dispatches and publishing payloads have completed successfully over the last 72 hours.
+        </p>
+</div>
+</div>
+</div>
+<!-- Team Members & Approval Workflow Permissions -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[1.5rem]">group</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Team Publishing Roles &amp; Permissions</h2>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-title-sm text-title-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[1.1rem]">person_add</span>
+<span>Invite Team Member</span>
+</button>
+</div>
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<!-- Table Header -->
+<div class="grid grid-cols-12 px-space-lg py-3 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<div class="col-span-5 sm:col-span-4">Team Member</div>
+<div class="col-span-4 sm:col-span-3">Assigned Role</div>
+<div class="hidden sm:block sm:col-span-3">Channel Scope</div>
+<div class="col-span-3 sm:col-span-2 text-right">Actions</div>
+</div>
+<!-- Member Row 1 -->
+<div class="grid grid-cols-12 px-space-lg py-4 items-center hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 sm:col-span-4 flex items-center gap-3 min-w-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of creative founder Elena Rostova with clean modern studio lighting and sharp professional focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUJM0fVcNxDOaEWf5odg3Q1OIkXVgDNoYQH8eDA1m-X53-wsWjlI7a5nI1LPn47RXEYkpJNgXvNKGY3TeyuWgakv4xeh_yvwxCArDpQquW8MjuOpOEbB2cMPe54_F86ch4sm4ed6dgtPMX-vhRUo_3egR2aNlNu-fpZ5yy-LBrEK7brh2C83HqYWleAnagWFAbZIkjynipF0jc2NSSlcjYYxrjgb44GJSIe2LsxqU"/>
+<div class="min-w-0 truncate">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Elena Rostova</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">elena@artisanbakery.com</p>
+</div>
+</div>
+<div class="col-span-4 sm:col-span-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[0.9rem]">workspace_premium</span>
+            Owner • Full Sign-Off
+          </span>
+</div>
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface">
+<span>All 6 Connected Channels</span>
+</div>
+<div class="col-span-3 sm:col-span-2 text-right">
+<span class="px-2 py-1 text-on-surface-variant font-body-sm text-body-sm italic">Master Admin</span>
+</div>
+</div>
+<!-- Member Row 2 -->
+<div class="grid grid-cols-12 px-space-lg py-4 items-center bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 sm:col-span-4 flex items-center gap-3 min-w-0">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of young male content strategist with glasses smiling in creative studio kitchen office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmGfOMMhG-FNlxPcamzctrUJxNPyC18CJqXQev1qmAxphJA5-E99o4ZJQ54c5gxidroLEhrFWtQaWVyjLXBdCGZ7eMoXV2z6UhMTg33QScPhs6wnxWq5_IasfYVO_0rCTLsTBIGhMC1VBqsxo1kxLKNwIvtX1B8bXQUDxvYePGSY4x9F4X1bwsBMvaXY1kEKpkxwrabGYfnmRA4GvzY2mBLw4P3QrPZI10RZuNTkU"/>
+<div class="min-w-0 truncate">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Marcus Vance</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">marcus.v@artisanbakery.com</p>
+</div>
+</div>
+<div class="col-span-4 sm:col-span-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[0.9rem]">edit_note</span>
+            Content Creator (Drafts only)
+          </span>
+</div>
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface">
+<span>Instagram, TikTok, X</span>
+</div>
+<div class="col-span-3 sm:col-span-2 text-right">
+<button class="px-2 py-1 text-primary hover:underline font-title-sm text-title-sm">Edit Scopes</button>
+</div>
+</div>
+<!-- Member Row 3 -->
+<div class="grid grid-cols-12 px-space-lg py-4 items-center hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 sm:col-span-4 flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-display font-semibold text-on-surface-variant">
+            SL
+          </div>
+<div class="min-w-0 truncate">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Sara Lindqvist</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">sara@foodiegrowth.agency</p>
+</div>
+</div>
+<div class="col-span-4 sm:col-span-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[0.9rem]">check_circle</span>
+            Approver / Editor
+          </span>
+</div>
+<div class="hidden sm:block sm:col-span-3 text-body-sm font-body-sm text-on-surface">
+<span>LinkedIn, YouTube</span>
+</div>
+<div class="col-span-3 sm:col-span-2 text-right">
+<button class="px-2 py-1 text-primary hover:underline font-title-sm text-title-sm">Edit Scopes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagnostic Modal Overlay (Hidden by default, triggered via diagnostics buttons) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="diagnosticModal">
+<div class="w-full max-w-lg rounded-2xl bg-surface-container-lowest p-space-xl shadow-2xl space-y-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary animate-ping"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Running Full Health Audit</h3>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline" id="closeDiagnosticModal">
+<span class="material-symbols-outlined text-[1.25rem]">close</span>
+</button>
+</div>
+<div class="space-y-space-md">
+<div class="space-y-1.5">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface" id="diagnosticModalLabel">Validating Webhook Handshakes...</span>
+<span class="font-mono-metric font-semibold text-primary" id="diagnosticModalPercent">45%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-300" id="diagnosticProgressBar" style="width: 45%;"></div>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low font-mono-metric text-label-sm space-y-1 text-on-surface-variant max-h-48 overflow-y-auto">
+<div>[00:01] GET https://api.linkedin.com/v2/me -&gt; 200 OK (34ms)</div>
+<div>[00:02] GET https://graph.facebook.com/v19.0/me/accounts -&gt; 200 OK (112ms)</div>
+<div>[00:02] Token TTL Check: 345,600s remaining • FLAG WARN</div>
+<div>[00:03] GET https://api.twitter.com/2/users/by/username -&gt; 200 OK (42ms)</div>
+<div class="text-primary">[00:04] Verifying YouTube Resumable Protocol Endpoint...</div>
+</div>
+</div>
+<div class="flex justify-end gap-2">
+<button class="h-9 px-4 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-colors" id="finishModalBtn">
+          Close Diagnostics
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple vanilla micro-interactions for modal and diagnostic check
+  const runBtn = document.getElementById('runDiagnosticsBtn');
+  const recheckBtn = document.getElementById('recheckDiagnosticsBtn');
+  const modal = document.getElementById('diagnosticModal');
+  const closeModal = document.getElementById('closeDiagnosticModal');
+  const finishBtn = document.getElementById('finishModalBtn');
+  const progressBar = document.getElementById('diagnosticProgressBar');
+  const progressPercent = document.getElementById('diagnosticModalPercent');
+  const progressLabel = document.getElementById('diagnosticModalLabel');
+
+  function openDiagnostics() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    let width = 10;
+    progressBar.style.width = width + '%';
+    progressPercent.textContent = width + '%';
+    
+    const interval = setInterval(() => {
+      width += 15;
+      if (width > 100) {
+        width = 100;
+        clearInterval(interval);
+        progressLabel.textContent = "Health check complete. All endpoints responsive.";
+        progressPercent.textContent = "100%";
+      } else {
+        progressPercent.textContent = width + '%';
+        if (width === 40) progressLabel.textContent = "Verifying Instagram token expirations...";
+        if (width === 70) progressLabel.textContent = "Testing X API rate limits...";
+        if (width === 85) progressLabel.textContent = "Inspecting YouTube video pipelines...";
+      }
+      progressBar.style.width = width + '%';
+    }, 280);
+  }
+
+  function hideModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  if (runBtn) runBtn.addEventListener('click', openDiagnostics);
+  if (recheckBtn) recheckBtn.addEventListener('click', openDiagnostics);
+  if (closeModal) closeModal.addEventListener('click', hideModal);
+  if (finishBtn) finishBtn.addEventListener('click', hideModal);
+</script></main></div></body></html>

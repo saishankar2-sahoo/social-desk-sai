@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#283044","tertiary-fixed-dim":"#ffb2b7","error":"#ba1a1a","on-primary-fixed":"#0f0069","outline":"#777587","surface-bright":"#faf8ff","on-background":"#131b2e","surface-dim":"#d2d9f4","on-primary-fixed-variant":"#3323cc","on-secondary-fixed":"#001e2f","error-container":"#ffdad6","on-surface":"#131b2e","secondary-container":"#39b8fd","primary":"#3525cd","surface-variant":"#dae2fd","surface-container-low":"#f2f3ff","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#40000d","on-primary":"#ffffff","on-tertiary":"#ffffff","inverse-on-surface":"#eef0ff","surface":"#faf8ff","on-secondary":"#ffffff","on-primary-container":"#dad7ff","on-error":"#ffffff","surface-container-highest":"#dae2fd","outline-variant":"#c7c4d8","primary-container":"#4f46e5","primary-fixed":"#e2dfff","inverse-primary":"#c3c0ff","on-tertiary-fixed-variant":"#92002a","on-secondary-container":"#004666","secondary":"#006591","secondary-fixed-dim":"#89ceff","on-secondary-fixed-variant":"#004c6e","surface-container-high":"#e2e7ff","surface-container":"#eaedff","surface-tint":"#4d44e3","tertiary-fixed":"#ffdadb","primary-fixed-dim":"#c3c0ff","on-tertiary-container":"#ffd0d2","on-surface-variant":"#464555","on-error-container":"#93000a","tertiary":"#95002b","background":"#faf8ff","tertiary-container":"#bf0f3c","secondary-fixed":"#c9e6ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem",margin:"1rem","gutter-lg":"2rem","space-lg":"1rem","margin-lg":"2rem","space-md":"0.75rem","margin-md":"1.5rem","gutter-md":"1.5rem","space-sm":"0.5rem",gutter:"1rem","space-xl":"1.5rem","space-2xl":"2rem"},fontFamily:{"headline-lg":["Plus Jakarta Sans"],display:["Plus Jakarta Sans"],"mono-metric":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"title-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"]},fontSize:{"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.025em",fontWeight:"600"}],display:["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.03em",fontWeight:"700"}],"mono-metric":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["0.8125rem",{lineHeight:"1rem",letterSpacing:"-0.005em",fontWeight:"500"}],"body-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["0.75rem",{lineHeight:"1.125rem",fontWeight:"400"}],"title-sm":["0.9375rem",{lineHeight:"1.375rem",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="PulseFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBSTdZzsQHm82HjGjSVAYh1cnlmEOa_I8csHddxiUNNb77dSjQhYInn27LtoDzpwAEaMl-wOrybtKuaeVvoCN3arM3UyYdWqTSEKsYQ8bz0DVNLQP7N_ebFd_uFTTIpmFwP-3vuu3j_w0svzykKztg2kCTSN1uqIwEcD850_iPg8hRwzZ14gi2GTp1fRk0tU40dCD13GRKwhPU9L9T95JaLX6adGvn2xTILmm2EHvLj"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">PulseFlow</span><span class="px-space-sm py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider">Pro</span></div></div><div class="px-space-md pt-space-xs pb-space-sm"><div class="w-full flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><div class="w-6 h-6 rounded-lg bg-primary text-on-primary flex items-center justify-center font-title-sm text-title-sm flex-shrink-0">A</div><div class="truncate text-left"><p class="font-title-sm text-title-sm truncate leading-tight">Artisan Bakery</p><p class="font-body-sm text-body-sm text-on-surface-variant truncate">Studio Workspace</p></div></div><span class="material-symbols-outlined text-outline text-[1.25rem]">unfold_more</span></div></div><nav class="px-space-md py-space-xs space-y-1 flex flex-col" data-active-classes="bg-primary-container text-on-primary font-title-sm shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[1.25rem]">grid_view</span><span>Overview</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-title-sm shadow-sm" data-path="trend-research" href="#"><span class="material-symbols-outlined text-[1.25rem]">trending_up</span><span>Trend Research</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="post-composer" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[1.25rem]">auto_fix_high</span><span>Post Composer</span></div><span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">AI Magic</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="content-calendar" href="#"><span class="material-symbols-outlined text-[1.25rem]">calendar_month</span><span>Content Calendar</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[1.25rem]">bar_chart</span><span>Analytics</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="connect-accounts" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[1.25rem]">link</span><span>Connect Accounts</span></div><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></a></nav></div><div class="p-space-md space-y-space-md bg-surface-container-lowest"><div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>CONNECTED CHANNELS</span><span class="material-symbols-outlined text-[1rem]">sensors</span></div><div class="flex items-center gap-space-sm pt-space-xs"><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>LI</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>IG</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>X</span></div><div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>YT</span></div></div></div><div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs"><div class="flex items-center justify-between text-on-surface font-title-sm text-title-sm"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[1rem]">bolt</span>AI Repurposes</span><span class="font-mono-metric text-mono-metric text-on-surface-variant">84/100</span></div><div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full rounded-full bg-primary" style="width: 84%;"></div></div><p class="font-body-sm text-body-sm text-on-surface-variant pt-0.5">16 credits renew in 5 days</p></div><div class="flex items-center justify-between px-space-sm pt-space-xs text-on-surface-variant"><a class="flex items-center gap-space-sm hover:text-on-surface font-title-sm text-title-sm transition-colors" data-path="help-and-settings" href="#"><span class="material-symbols-outlined text-[1.25rem]">settings</span><span>Help &amp; Settings</span></a><span class="material-symbols-outlined text-[1.25rem] cursor-pointer hover:text-on-surface">help</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between gap-space-lg"><div class="relative flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-[1.25rem]">search</span><input class="w-full h-10 pl-10 pr-16 rounded-lg bg-surface-container-lowest border-0 ring-1 ring-outline-variant focus:ring-2 focus:ring-primary focus:outline-none text-on-surface placeholder:text-outline font-body-md text-body-md transition-all" placeholder="Search posts, trends, campaigns..." type="text"/><kbd class="absolute right-space-md px-1.5 py-0.5 rounded bg-surface-container font-mono-metric text-label-sm text-on-surface-variant pointer-events-none">Ctrl+K</kbd></div></div><div class="flex items-center gap-space-md flex-shrink-0"><button class="h-9 px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center gap-space-sm shadow-sm transition-colors"><span class="material-symbols-outlined text-[1.25rem]">add</span><span>New Repurpose Flow</span></button><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface cursor-pointer transition-colors"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-md text-label-md text-on-surface-variant">Review Queue <strong class="text-tertiary font-semibold">(3)</strong></span></div><button class="w-9 h-9 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[1.25rem]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-space-sm pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTVQcSQky7EKjVFLFcdcEFheyvcJ2LvH6dpueyXHjEvV005lhAGf6v_HOhYF7uX3-DinZ0y7--Gjn308o6Yj6B6KJJbobyu7B3havT_SoQ5Tsg3a-nXwfZY_w8hyn5vb5DC5F2eOZyDHnCl1jh4Nss2VjWqe7ZHnXoCccnIqJnyhbI06v8NR8sRl-6BKvqH0-Uzy9F1AvWdFr33fRJaVvnCNWhr3jA863kDWO1kHM"/><div class="hidden xl:block text-left"><p class="font-title-sm text-title-sm text-on-surface leading-tight">Elena Rostova</p><p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Founder</p></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-xl py-space-xl"><div class="flex flex-col w-full space-y-gutter-lg">
+<!-- TOP HEADER & REAL-TIME STATUS BAR -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs max-w-2xl">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+          Live Ingestion Engine
+        </span>
+<span class="font-mono-metric text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[0.875rem] text-secondary">sync</span>
+          Live scanner synced 3 mins ago • 1,420 sources parsed
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Trend Radar &amp; Viral Inspiration</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Real-time trending topics, niche hashtags, and audience questions across LinkedIn, Instagram, X, and YouTube Shorts.
+      </p>
+</div>
+<!-- MAIN VIEW MODE TABS -->
+<div class="flex items-center p-1 rounded-xl bg-surface-container-high self-start md:self-auto shadow-inner">
+<button class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-title-sm text-title-sm transition-all" id="tab-btn-radar" onclick="switchTab('radar')">
+<span class="material-symbols-outlined text-[1.125rem] text-primary">radar</span>
+<span>Algorithmic Radar</span>
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-mono-metric text-label-sm">18 New</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm transition-all" id="tab-btn-trackers" onclick="switchTab('trackers')">
+<span class="material-symbols-outlined text-[1.125rem]">notification_add</span>
+<span>Custom Trackers</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</button>
+</div>
+</div>
+<!-- TAB 1: RADAR (ACTIVE BY DEFAULT) -->
+<div class="flex flex-col space-y-gutter-lg" id="radar-view">
+<!-- SEARCH & FILTER TOOLBAR PANEL -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.05)] space-y-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center gap-space-md">
+<!-- Search input -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[1.25rem]">search_insights</span>
+<input class="w-full h-11 pl-11 pr-24 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search keywords, competitor handles, or industry topics..." type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-surface-container font-mono-metric text-label-sm text-on-surface-variant pointer-events-none">Filter: Artisan</span>
+</div>
+<!-- Filter Selects -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Industry Select -->
+<div class="relative">
+<select class="h-11 pl-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-title-sm text-title-sm appearance-none cursor-pointer hover:bg-surface-container focus:outline-none focus:ring-2 focus:ring-primary transition-colors">
+<option selected="">Artisan Food &amp; Craft</option>
+<option>Tech &amp; SaaS Founders</option>
+<option>Fitness &amp; Holistic Health</option>
+<option>Direct-to-Consumer Brands</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[1.125rem]">expand_more</span>
+</div>
+<!-- Velocity -->
+<div class="relative">
+<select class="h-11 pl-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-title-sm text-title-sm appearance-none cursor-pointer hover:bg-surface-container focus:outline-none focus:ring-2 focus:ring-primary transition-colors">
+<option selected="">Velocity: Rising Fast 🔥</option>
+<option>Breakout Surge (&gt;250%)</option>
+<option>Sustained Peak</option>
+<option>Emerging Underground</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[1.125rem]">expand_more</span>
+</div>
+<!-- Timeframe -->
+<div class="relative">
+<select class="h-11 pl-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-title-sm text-title-sm appearance-none cursor-pointer hover:bg-surface-container focus:outline-none focus:ring-2 focus:ring-primary transition-colors">
+<option>Last 24 Hours</option>
+<option selected="">This Week</option>
+<option>Past 14 Days</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[1.125rem]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Channel Pills Bar -->
+<div class="flex items-center justify-between pt-space-xs border-0 border-t border-surface-container">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 sm:pb-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mr-2 hidden sm:inline">Platform:</span>
+<button class="px-3 py-1 rounded-full bg-primary text-on-primary font-title-sm text-title-sm shadow-sm transition-transform active:scale-95">All Channels</button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-title-sm text-title-sm flex items-center gap-1.5 transition-colors">
+<span class="w-2 h-2 rounded-full bg-[#0A66C2]"></span>
+            LinkedIn
+          </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-title-sm text-title-sm flex items-center gap-1.5 transition-colors">
+<span class="w-2 h-2 rounded-full bg-[#E1306C]"></span>
+            Instagram
+          </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-title-sm text-title-sm flex items-center gap-1.5 transition-colors">
+<span class="w-2 h-2 rounded-full bg-black"></span>
+            X (Twitter)
+          </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-title-sm text-title-sm flex items-center gap-1.5 transition-colors">
+<span class="w-2 h-2 rounded-full bg-[#FF0000]"></span>
+            YouTube Shorts
+          </button>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm hidden md:flex">
+<span>Sort by:</span>
+<span class="font-title-sm text-title-sm text-primary cursor-pointer hover:underline flex items-center gap-0.5">
+            Virality Score
+            <span class="material-symbols-outlined text-[1rem]">arrow_downward</span>
+</span>
+</div>
+</div>
+</div>
+<!-- MAIN METRIC HIGHLIGHT / HERO STRIP -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Top Emerging Archetype</span>
+<span class="material-symbols-outlined text-primary text-[1.25rem]">grain</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md text-on-surface">Micro-Precision Craft</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">High-frame-rate close-ups + tactile sound</p>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-secondary font-mono-metric font-semibold">+412% MoM</span>
+<span class="text-on-surface-variant">42k creators</span>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Fastest Format Growth</span>
+<span class="material-symbols-outlined text-secondary text-[1.25rem]">timelapse</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md text-on-surface">6-Second Sensory Loops</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Looped crust crackle &amp; oven spring</p>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-secondary font-mono-metric font-semibold">91.4% Completion</span>
+<span class="text-on-surface-variant">YT &amp; Reels</span>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Audience Sentiment</span>
+<span class="material-symbols-outlined text-primary-container text-[1.25rem]">sentiment_very_satisfied</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md text-on-surface">88% Highly Engaged</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Questions asking for step-by-step ratio</p>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-primary font-mono-metric font-semibold">14.8k comments/day</span>
+<span class="text-on-surface-variant">High purchase intent</span>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-primary text-on-primary shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between text-on-primary/80">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">AI Studio Suggestion</span>
+<span class="material-symbols-outlined text-[1.25rem]">auto_awesome</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md leading-tight text-white">Batch Create “Crumb Breakdown”</div>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">Optimal schedule window: Today 17:30 UTC</p>
+</div>
+<button class="w-full py-1.5 px-3 rounded-lg bg-surface-container-lowest text-primary font-title-sm text-title-sm hover:bg-surface-container-low transition-colors text-center shadow-sm">
+          Launch 1-Click Studio
+        </button>
+</div>
+</div>
+<!-- TREND CLUSTERS GRID (3 RICH CARDS) -->
+<div class="flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Active Trend Clusters</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-metric text-label-sm">3 Recommended Today</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Updated every 15 minutes</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- CARD 1: Sourdough Hydration -->
+<div class="rounded-2xl bg-surface-container-lowest shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+<div>
+<!-- Media Visual Header -->
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cinematic macro shot of an open artisan sourdough loaf showing wild honeycomb crumb structure, backlit by warm golden hour sunlight on a dark slate surface with flour dust in light indigo air." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnidKbH3YagcCY5oEvsF0ykwdPdwgvlwzG-Ln1-HsTAhzaaRE1lcm8Y-LC1mfDou24BjbzcHBawSgjQJGw476lPGAANwHvTZYfpriZqkmmEi4hWE7UZzubTCLpY99Jw8xIPunTUR4Rd2xenolrZUiAwl8wJKhVnnwRYIzJycM6yoqzPEvLoK7NFgHghfFTHLSeZbi7kzTgdWFw2AaI-m8VujeioFdB4BzKLp1mUGc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+<!-- Badges Over Media -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-tertiary font-title-sm text-body-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[1rem]">trending_up</span>
+                  +340% search surge
+                </span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center shadow-sm" title="Dominant: YouTube Shorts">
+<span class="material-symbols-outlined text-[#FF0000] text-[1.125rem]">play_circle</span>
+</span>
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center shadow-sm" title="Instagram Reels">
+<span class="material-symbols-outlined text-[#E1306C] text-[1.125rem]">photo_camera</span>
+</span>
+</div>
+<!-- Inline Velocity Metric -->
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant font-semibold">Artisan Baking • Technique Deep-Dive</span>
+<h3 class="font-headline-md text-headline-md leading-tight mt-0.5 text-white">Sourdough hydration techniques &amp; crumb structure</h3>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-lg space-y-space-md">
+<!-- Channel Dominance Sparkline Indicator -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant font-body-sm">Dominant Channel Surge</span>
+<span class="font-mono-metric text-title-sm text-primary">YouTube Shorts &amp; IG Reels</span>
+</div>
+<!-- Inline SVG Sparkline -->
+<div class="w-full h-8 pt-1">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 240 32">
+<path class="text-primary" d="M0,28 L30,26 L60,27 L90,20 L120,22 L150,14 L180,12 L210,6 L240,2" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<circle class="fill-primary animate-pulse" cx="240" cy="2" r="3.5"></circle>
+</svg>
+</div>
+</div>
+<!-- Viral Hook Box -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[1rem]">format_quote</span>
+                    Top Performing Hook
+                  </span>
+<span class="font-mono-metric text-label-sm text-secondary">94% Retention Hook</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container font-title-sm text-title-sm text-on-surface leading-snug">
+                  “Stop baking brick bread. Here is the 80% hydration secret that doubles your air bubbles.”
+                </div>
+</div>
+<!-- Keyword cloud chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#sourdoughcrumb</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#hydration80</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#bakingasmr</span>
+</div>
+</div>
+</div>
+<!-- Card Footer Action -->
+<div class="p-space-lg pt-0">
+<button class="w-full h-10 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-space-sm shadow-sm hover:shadow transition-all group-hover:ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-[1.125rem]">auto_fix_high</span>
+<span>✨ Repurpose into 4 Posts</span>
+</button>
+<div class="flex items-center justify-center gap-space-md mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Shorts Script</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>IG Carousel</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#0A66C2]"></span>LI Breakdown</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: Small Business Pricing Transparency -->
+<div class="rounded-2xl bg-surface-container-lowest shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+<div>
+<!-- Media Visual Header -->
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Overhead aesthetic desktop workspace of an artisan bakery founder with handwritten flour cost ledgers, laptop displaying financial profit metrics, cup of espresso, and rustic linen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH47p1FTV0f-of6WeMn653dgzCycSn24325PXLSvdikehUy2cyZ3GN9VQnR9-5kXGc_P1KX0ZrH3nkN16q8EASG5x5yBlz8WfhRsYgDKC9XrWkRVTH3Grh1sQfM0z2dRL0RLmYUE9dMONxMhOX7_XG-wVJni3Y6xB8dI1UkqZj8q16TQf83KuazCyKG5NIw1s-7yzW4AP83I1CxS5bmwxLqruhJN3dw1736BQHhhQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+<!-- Badges Over Media -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-title-sm text-body-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[1rem]">moving</span>
+                  +190% on LinkedIn &amp; X
+                </span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center shadow-sm" title="Dominant: LinkedIn">
+<span class="material-symbols-outlined text-[#0A66C2] text-[1.125rem]">share</span>
+</span>
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center shadow-sm" title="X (Twitter)">
+<span class="material-symbols-outlined text-black text-[1.125rem]">tag</span>
+</span>
+</div>
+<!-- Inline Topic Title -->
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant font-semibold">Founder Story • Economics</span>
+<h3 class="font-headline-md text-headline-md leading-tight mt-0.5 text-white">Small business pricing transparency</h3>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-lg space-y-space-md">
+<!-- Channel Surge & Tone Breakdown -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant font-body-sm">Editorial Tone Vibe</span>
+<span class="font-mono-metric text-title-sm text-secondary font-semibold">Authentic &amp; Vulnerable</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-0.5">
+                  Audiences are rewarding unfiltered receipts over polished corporate marketing. 3.2x bookmark rate.
+                </p>
+</div>
+<!-- Viral Hook Box -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[1rem]">format_quote</span>
+                    Top Performing Hook
+                  </span>
+<span class="font-mono-metric text-label-sm text-secondary">88% Share Spike</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container font-title-sm text-title-sm text-on-surface leading-snug">
+                  “A customer asked why our cinnamon loaf costs $9. Here is the exact receipt breakdown of flour, energy, and living wages.”
+                </div>
+</div>
+<!-- Keyword cloud chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#buildinginpublic</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#smallbiztransparent</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#bakeryowner</span>
+</div>
+</div>
+</div>
+<!-- Card Footer Action -->
+<div class="p-space-lg pt-0">
+<button class="w-full h-10 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-space-sm shadow-sm hover:shadow transition-all group-hover:ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-[1.125rem]">auto_fix_high</span>
+<span>✨ Repurpose into 4 Posts</span>
+</button>
+<div class="flex items-center justify-center gap-space-md mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#0A66C2]"></span>LinkedIn Essay</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-black"></span>X 7-Tweet Thread</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>IG Story Polls</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: Zero-Waste Kitchen Hacks -->
+<div class="rounded-2xl bg-surface-container-lowest shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+<div>
+<!-- Media Visual Header -->
+<div class="relative h-44 w-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artistic zero-waste culinary workspace with dehydrated sourdough discard crackers, glass fermentation jars, dried organic rosemary herbs, warm studio lighting with crisp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkzHeIF8PlMGIP4WTxl4A_vY7dPl30F1cAZ7zPRqd6ppVq35_-ke7VkF7AzLHpKl_OnmSNL0G0w0pSz74X8t98Y7BuzWwsmHxhwe7piu7xDoBHUvE6GwFWkohCeOo9aZjBIIoL4h9tB_1Mgmtd0pWkcjcXYTCjkOyZmcljg3bAHvI-wcqUHR5hynHqU_uA1Z9EAVEx7l54XxwOm7bcdhvDubgzpkC2M5c55ipjpTY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+<!-- Badges Over Media -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-tertiary text-on-tertiary font-title-sm text-body-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[1rem]">bolt</span>
+                  Breakout Trend
+                </span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center shadow-sm" title="Instagram Reels">
+<span class="material-symbols-outlined text-[#E1306C] text-[1.125rem]">photo_camera</span>
+</span>
+<span class="w-7 h-7 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center shadow-sm" title="YouTube Shorts">
+<span class="material-symbols-outlined text-[#FF0000] text-[1.125rem]">play_circle</span>
+</span>
+</div>
+<!-- Inline Topic Title -->
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant font-semibold">Sustainability • Discard Recipes</span>
+<h3 class="font-headline-md text-headline-md leading-tight mt-0.5 text-white">Zero-waste kitchen hacks &amp; starter discard</h3>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-lg space-y-space-md">
+<!-- Velocity Details -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant font-body-sm">Viral Velocity</span>
+<span class="font-mono-metric text-title-sm text-tertiary font-semibold">Breakout (4.8x normal pace)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-0.5">
+                  Over 82,000 saves on Instagram this week. Driven by rising grocery awareness and sustainable homesteading culture.
+                </p>
+</div>
+<!-- Viral Hook Box -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[1rem]">format_quote</span>
+                    Top Performing Hook
+                  </span>
+<span class="font-mono-metric text-label-sm text-secondary">91% Save Rate</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container font-title-sm text-title-sm text-on-surface leading-snug">
+                  “Never throw out sourdough discard again. Turn it into gourmet 10-minute rosemary sea salt crackers.”
+                </div>
+</div>
+<!-- Keyword cloud chips -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#sourdoughdiscard</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#zerowastekitchen</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-high font-mono-metric text-label-sm text-on-surface">#homesteadhacks</span>
+</div>
+</div>
+</div>
+<!-- Card Footer Action -->
+<div class="p-space-lg pt-0">
+<button class="w-full h-10 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-space-sm shadow-sm hover:shadow transition-all group-hover:ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-[1.125rem]">auto_fix_high</span>
+<span>✨ Repurpose into 4 Posts</span>
+</button>
+<div class="flex items-center justify-center gap-space-md mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#E1306C]"></span>Recipe Reel</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Shorts Tutorial</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#0A66C2]"></span>B2B Waste Cost</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- COMPETITIVE NICHE INSIGHTS & HASHTAG ANALYTICS PANEL -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Trending Audio Tracks for Shorts/Reels (7 cols) -->
+<div class="lg:col-span-7 p-space-xl rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[1.25rem]">graphic_eq</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Trending Audio Waves for Shorts &amp; Reels</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top-ranking ambient tracks accelerating algorithm distribution</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Real-Time Sync</span>
+</div>
+<!-- Audio List with Playback Previews -->
+<div class="mt-space-md space-y-space-sm">
+<!-- Audio item 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center gap-space-md">
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm flex-shrink-0 hover:scale-105 transition-transform" onclick="togglePlay(this)">
+<span class="material-symbols-outlined text-[1.25rem]">play_arrow</span>
+</button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Morning Routine - Ambient Lo-Fi Chill</p>
+<span class="font-mono-metric text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[0.875rem]">local_fire_department</span>
+                    94.2k reels
+                  </span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant mt-1">
+<span>Slow acoustic guitar • Calm Morning Vibe</span>
+<span class="font-mono-metric text-label-sm">0:32 / 122 BPM</span>
+</div>
+<!-- Mini Waveform Visualizer -->
+<div class="flex items-center gap-1 mt-2 h-4 w-full">
+<div class="w-1 bg-primary/40 h-2 rounded-full"></div>
+<div class="w-1 bg-primary/70 h-3 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary/80 h-3.5 rounded-full"></div>
+<div class="w-1 bg-primary/60 h-2 rounded-full"></div>
+<div class="w-1 bg-primary/40 h-2.5 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary/90 h-3.5 rounded-full"></div>
+<div class="w-1 bg-primary/50 h-2 rounded-full"></div>
+<div class="w-1 bg-primary/30 h-1.5 rounded-full"></div>
+<div class="w-1 bg-primary/60 h-2.5 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary/70 h-3 rounded-full"></div>
+<div class="w-1 bg-primary/40 h-1.5 rounded-full"></div>
+<div class="w-1 bg-primary/80 h-3.5 rounded-full"></div>
+<div class="w-1 bg-primary/50 h-2.5 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary/70 h-3 rounded-full"></div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary font-title-sm text-body-sm shadow-sm flex items-center gap-1 transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[1rem]">bookmark_add</span>
+<span>Use Track</span>
+</button>
+</div>
+<!-- Audio item 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center gap-space-md">
+<button class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shadow-sm flex-shrink-0 hover:bg-primary hover:text-on-primary transition-all" onclick="togglePlay(this)">
+<span class="material-symbols-outlined text-[1.25rem]">play_arrow</span>
+</button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Crackle &amp; Steam (Crisp Sensory ASMR)</p>
+<span class="font-mono-metric text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[0.875rem]">trending_up</span>
+                    48.1k shorts
+                  </span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant mt-1">
+<span>Natural Foley • No instruments</span>
+<span class="font-mono-metric text-label-sm">0:15 / Organic</span>
+</div>
+<!-- Mini Waveform Visualizer -->
+<div class="flex items-center gap-1 mt-2 h-4 w-full">
+<div class="w-1 bg-outline-variant h-1 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-2.5 rounded-full"></div>
+<div class="w-1 bg-secondary h-4 rounded-full"></div>
+<div class="w-1 bg-secondary/80 h-3 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-1.5 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-2 rounded-full"></div>
+<div class="w-1 bg-secondary h-4 rounded-full"></div>
+<div class="w-1 bg-secondary/60 h-2.5 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-1.5 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-2 rounded-full"></div>
+<div class="w-1 bg-secondary h-3.5 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-1.5 rounded-full"></div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary font-title-sm text-body-sm shadow-sm flex items-center gap-1 transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[1rem]">bookmark_add</span>
+<span>Use Track</span>
+</button>
+</div>
+<!-- Audio item 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-center gap-space-md">
+<button class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shadow-sm flex-shrink-0 hover:bg-primary hover:text-on-primary transition-all" onclick="togglePlay(this)">
+<span class="material-symbols-outlined text-[1.25rem]">play_arrow</span>
+</button>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-title-sm text-title-sm text-on-surface truncate">Vibrant Cinematic Strings - Rising Narrative</p>
+<span class="font-mono-metric text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[0.875rem]">trending_up</span>
+                    31.8k posts
+                  </span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant mt-1">
+<span>Fast Tempo • High Tension Hook</span>
+<span class="font-mono-metric text-label-sm">0:24 / 138 BPM</span>
+</div>
+<!-- Mini Waveform Visualizer -->
+<div class="flex items-center gap-1 mt-2 h-4 w-full">
+<div class="w-1 bg-outline-variant h-1.5 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-2 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-3 rounded-full"></div>
+<div class="w-1 bg-primary/70 h-3.5 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary h-4 rounded-full"></div>
+<div class="w-1 bg-primary/60 h-2.5 rounded-full"></div>
+<div class="w-1 bg-outline-variant h-1.5 rounded-full"></div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary font-title-sm text-body-sm shadow-sm flex items-center gap-1 transition-colors flex-shrink-0">
+<span class="material-symbols-outlined text-[1rem]">bookmark_add</span>
+<span>Use Track</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-0 border-t border-surface-container text-body-sm">
+<span class="text-on-surface-variant">Audio licenses cleared for commercial organic repurpose</span>
+<a class="text-primary font-title-sm text-title-sm hover:underline flex items-center gap-0.5" href="#">Explore 84 more tracks <span class="material-symbols-outlined text-[1rem]">arrow_forward</span></a>
+</div>
+</div>
+<!-- Right Column: Top Performing Audience Questions (5 cols) -->
+<div class="lg:col-span-5 p-space-xl rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[1.25rem]">help_center</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Audience Question Radar</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top searched inquiries with low video answer saturation</p>
+</div>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-on-surface">tune</span>
+</div>
+<!-- Question Items List -->
+<div class="mt-space-md space-y-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-mono-metric text-label-sm font-semibold">High Opportunity Gap</span>
+<span class="font-mono-metric text-body-sm text-primary font-semibold">18.4k query vol</span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface mt-1.5 leading-snug group-hover:text-primary transition-colors">
+                “How to score sourdough bread without a razor or lame?”
+              </p>
+<div class="flex items-center justify-between mt-2 pt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Direct intent • High comment engagement</span>
+<span class="text-primary font-title-sm flex items-center gap-0.5">Generate Draft →</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-mono-metric text-label-sm">Medium Saturation</span>
+<span class="font-mono-metric text-body-sm text-on-surface-variant font-semibold">12.1k query vol</span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface mt-1.5 leading-snug group-hover:text-primary transition-colors">
+                “Why is my sourdough starter separating with liquid on top?”
+              </p>
+<div class="flex items-center justify-between mt-2 pt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Troubleshooting intent • Perfect for Carousel</span>
+<span class="text-primary font-title-sm flex items-center gap-0.5">Generate Draft →</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-mono-metric text-label-sm font-semibold">Breakout Question 🔥</span>
+<span class="font-mono-metric text-body-sm text-secondary font-semibold">9.7k query vol</span>
+</div>
+<p class="font-title-sm text-title-sm text-on-surface mt-1.5 leading-snug group-hover:text-primary transition-colors">
+                “How much does opening an artisan micro-bakery actually cost?”
+              </p>
+<div class="flex items-center justify-between mt-2 pt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>B2B / Founder interest • Ideal for LinkedIn</span>
+<span class="text-primary font-title-sm flex items-center gap-0.5">Generate Draft →</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm flex items-center justify-center gap-space-sm transition-colors mt-space-sm">
+<span class="material-symbols-outlined text-[1.125rem]">psychology</span>
+<span>Load 15 More Audience Questions</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TAB 2: CUSTOM TRACKERS & BRAND MONITORED KEYWORDS (EMPTY STATE DEMONSTRATION) -->
+<div class="hidden flex-col space-y-gutter-lg" id="trackers-view">
+<!-- Action Bar for Custom Trackers -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+<div class="space-y-0.5">
+<h2 class="font-headline-md text-headline-md text-on-surface">Custom Competitor &amp; Niche Watchlists</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Set automated crawler webhooks on direct competitors, hashtags, or specific customer personas.</p>
+</div>
+<button class="h-10 px-space-lg rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center gap-space-sm shadow-sm transition-all self-start sm:self-auto">
+<span class="material-symbols-outlined text-[1.125rem]">add</span>
+<span>Add Your First Tracker</span>
+</button>
+</div>
+<!-- ELEGANT EMPTY STATE PANEL -->
+<div class="w-full p-12 md:p-16 rounded-3xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] flex flex-col items-center justify-center text-center relative overflow-hidden">
+<!-- Gentle Dashed Bounding Area -->
+<div class="w-full max-w-2xl p-8 md:p-12 rounded-2xl border-2 border-dashed border-outline-variant bg-surface-container-low/50 flex flex-col items-center">
+<!-- Radar Illustration Icon with Pulse Animation -->
+<div class="relative w-20 h-20 mb-space-lg flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-primary/10 animate-ping opacity-60"></div>
+<div class="w-16 h-16 rounded-2xl bg-surface-container-lowest shadow-md flex items-center justify-center text-primary relative z-10">
+<span class="material-symbols-outlined text-[2rem]">travel_explore</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-mono-metric text-label-sm uppercase tracking-wider mb-space-sm">
+          Autonomous AI Sentinel
+        </span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight max-w-lg">
+          No custom keyword alerts tracked yet
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-space-sm leading-relaxed">
+          Start monitoring your local competitors, niche ingredient keywords, or client handles to get automated trend spikes before they saturate social feeds.
+        </p>
+<!-- CTA Action -->
+<div class="mt-space-xl flex flex-col sm:flex-row items-center gap-space-md">
+<button class="h-11 px-space-xl rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm flex items-center gap-space-sm shadow-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-[1.25rem]">add_circle</span>
+<span>Add Your First Tracker</span>
+</button>
+<button class="h-11 px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm flex items-center gap-space-sm transition-colors">
+<span class="material-symbols-outlined text-[1.25rem]">bookmark_border</span>
+<span>Import Artisan Bakery Template</span>
+</button>
+</div>
+<!-- Micro Feature Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mt-10 pt-space-lg border-0 border-t border-surface-container-high w-full max-w-lg text-left">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[1.25rem] mt-0.5">crisis_alert</span>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Spike Alerts</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Pings to Slack or Email</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[1.25rem] mt-0.5">visibility</span>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Rival Intel</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Track top posts by velocity</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[1.25rem] mt-0.5">auto_mode</span>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Auto-Compose</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Generate countering hooks</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LOADING STATE DEMONSTRATION SIMULATOR -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)] space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[1.25rem] animate-spin">refresh</span>
+<span class="font-title-sm text-title-sm text-on-surface">Live Ingestion Pipeline Simulation</span>
+</div>
+<span class="font-mono-metric text-label-sm text-on-surface-variant">Status: Parsing 84 Channels...</span>
+</div>
+<!-- Skeleton loading placeholders -->
+<div class="space-y-space-sm">
+<div class="w-full h-12 rounded-xl bg-surface-container-low animate-pulse flex items-center px-4 justify-between">
+<div class="h-4 bg-surface-container-highest rounded w-1/4"></div>
+<div class="h-4 bg-surface-container-highest rounded w-1/6"></div>
+<div class="h-4 bg-surface-container-highest rounded w-1/12"></div>
+</div>
+<div class="w-full h-12 rounded-xl bg-surface-container-low animate-pulse flex items-center px-4 justify-between">
+<div class="h-4 bg-surface-container-highest rounded w-1/3"></div>
+<div class="h-4 bg-surface-container-highest rounded w-1/5"></div>
+<div class="h-4 bg-surface-container-highest rounded w-1/12"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  function switchTab(tabKey) {
+    const radarView = document.getElementById('radar-view');
+    const trackersView = document.getElementById('trackers-view');
+    const btnRadar = document.getElementById('tab-btn-radar');
+    const btnTrackers = document.getElementById('tab-btn-trackers');
+
+    if (tabKey === 'radar') {
+      radarView.classList.remove('hidden');
+      trackersView.classList.add('hidden');
+      
+      btnRadar.className = "flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-title-sm text-title-sm transition-all";
+      btnTrackers.className = "flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm transition-all";
+    } else {
+      radarView.classList.add('hidden');
+      trackersView.classList.remove('hidden');
+      
+      btnTrackers.className = "flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-title-sm text-title-sm transition-all";
+      btnRadar.className = "flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm transition-all";
+    }
+  }
+
+  function togglePlay(btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon.textContent === 'play_arrow') {
+      icon.textContent = 'pause';
+      btn.classList.add('bg-tertiary', 'text-on-tertiary');
+      btn.classList.remove('bg-primary', 'bg-surface-container-highest');
+    } else {
+      icon.textContent = 'play_arrow';
+      btn.classList.remove('bg-tertiary', 'text-on-tertiary');
+      btn.classList.add('bg-primary', 'text-on-primary');
+    }
+  }
+</script></main></div></body></html>
